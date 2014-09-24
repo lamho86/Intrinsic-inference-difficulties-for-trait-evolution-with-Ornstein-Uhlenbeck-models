@@ -1,4 +1,11 @@
 ### July 23 2014
+### Lam Ho (lamho86@gmail.com)
+# aic: Akaike information criterion
+# bic: Bayesian information criterion
+# saic: SURFACE like AIC
+# sbic: SURFACE like BIC
+# mbic: modified BIC
+
 
 OUshifts <- function(y, phy, method=c("mbic","aic","bic","saic","sbic"), nmax, check.pruningwise = TRUE) {
 	if (!inherits(phy, "phylo")) 
