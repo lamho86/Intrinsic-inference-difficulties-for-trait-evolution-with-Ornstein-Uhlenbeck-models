@@ -1,0 +1,370 @@
+#NEXUS
+[written Sat Nov 18 14:09:07 EST 2006 by Mesquite  version 1.1 (build h61) at charles-davis-powerbook-g4-15.local/10.0.1.2]
+
+BEGIN TAXA;
+	TITLE Anolis;
+	DIMENSIONS NTAX=25;
+	TAXLABELS
+		AcalyphaKW Bernardia_incana235cd Clutia_pulchellaKW CodiaeumKW33 Croton_alabamKW08 DalechampiaKW Endospermum237 Erythrococca334 Euphorbia_obovalBlank Euphorbia_polychroma231 HeveaKW Homalanthus331cd Koilodepas335cd Maprounea232cd Micrandra336cd Monotaxis333cd Neoscortechinia337cd Ostodes206cd Pera_bicolorKW41 Pimelodendron1268kw Pogonophora134kw Rafflesia_priceiAY739008 Rhizanthes_infantAY739010 RicinusKW09 Sapria_YQcd 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Measurements;
+	DIMENSIONS NCHAR=2;
+	FORMAT DATATYPE = CONTINUOUS;
+CHARSTATELABELS 
+		1 'flower diameter (mm)',
+		2 log_transformed_size ; 
+	MATRIX
+	AcalyphaKW                  0.7 -0.35667494394
+	Bernardia_incana235cd       2.5 0.91629073187
+	Clutia_pulchellaKW          2.5 0.91629073187
+	CodiaeumKW33                1.5 0.40546510811
+	Croton_alabamKW08           4.0 1.38629436112
+	DalechampiaKW               2.0 0.69314718056
+	Endospermum237              3.0 1.09861228867
+	Erythrococca334             1.5 0.40546510811
+	Euphorbia_obovalBlank       3.0 1.09861228867
+	Euphorbia_polychroma231     2.0 0.69314718056
+	HeveaKW                     2.5 0.91629073187
+	Homalanthus331cd            3.0 1.09861228867
+	Koilodepas335cd             1.5 0.40546510811
+	Maprounea232cd              1.5 0.40546510811
+	Micrandra336cd              5.0 1.60943791243
+	Monotaxis333cd              2.0 0.69314718056
+	Neoscortechinia337cd        3.0 1.09861228867
+	Ostodes206cd                10.0 2.30258509299
+	Pera_bicolorKW41            2.0 0.69314718056
+	Pimelodendron1268kw         2.5 0.91629073187
+	Pogonophora134kw            2.0 0.69314718056
+	Rafflesia_priceiAY739008    305.0 5.72031177661
+	Rhizanthes_infantAY739010   140.0 4.94164242261
+	RicinusKW09                 3.5 1.2527629685
+	Sapria_YQcd                 175.0 5.16478597392
+
+;
+
+END;
+BEGIN TREES;
+	Title Trees_Directly_From_File;
+	LINK Taxa = Anolis;
+	TRANSLATE
+		1 AcalyphaKW,
+		2 Bernardia_incana235cd,
+		3 Clutia_pulchellaKW,
+		4 CodiaeumKW33,
+		5 Croton_alabamKW08,
+		6 DalechampiaKW,
+		7 Endospermum237,
+		8 Erythrococca334,
+		9 Euphorbia_obovalBlank,
+		10 Euphorbia_polychroma231,
+		11 HeveaKW,
+		12 Homalanthus331cd,
+		13 Koilodepas335cd,
+		14 Maprounea232cd,
+		15 Micrandra336cd,
+		16 Monotaxis333cd,
+		17 Neoscortechinia337cd,
+		18 Ostodes206cd,
+		19 Pera_bicolorKW41,
+		20 Pimelodendron1268kw,
+		21 Pogonophora134kw,
+		22 Rafflesia_priceiAY739008,
+		23 Rhizanthes_infantAY739010,
+		24 RicinusKW09,
+		25 Sapria_YQcd;
+	TREE smoothed119NEW = ((21:84.325834,(19:64.276903,3:64.276903):20.048932):34.674166,((25:72.008686,(23:60.230892,22:60.230892):11.777794):46.097195,(((((1:60.832341,(((13:46.812191,16:46.812191):3.385755,24:50.197946):7.150768,((2:28.559661,6:28.559661):22.932113,8:51.491774):5.856941):3.483627):6.835262,(5:60.093278,(4:44.283619,18:44.283619):15.809659):7.574325):1.719487,((7:65.79343,((9:40.829554,10:40.829554):15.86274,(12:46.55699,14:46.55699):10.135304):9.101137):1.939434,(15:22.274306,11:22.274306):45.458559):1.654226):0.975806,20:70.362896):6.299427,17:76.662324):41.443557):0.89412);
+
+END;
+
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  Squared:  1 -  2;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  Brownian_default:  1 -  2;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 8938616441617523648;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 9176018658953570589;
+			checksum 0 245653939;
+		endTell;
+		getEmployee  #mesquite.trees.ManageTrees.ManageTrees;
+		tell It;
+			showTrees 0 #mesquite.lists.TreesList.TreesList;
+			tell It;
+				setTreeBlock 1;
+				getWindow;
+				tell It;
+					newAssistant  #mesquite.lists.NumForTreeList.NumForTreeList;
+				tell It;
+					suppress;
+					setValueTask  #mesquite.trees.NumberOfTaxa.NumberOfTaxa;
+					desuppress;
+				endTell;
+					newAssistant  #mesquite.lists.TreeListRooted.TreeListRooted;
+					newAssistant  #mesquite.lists.TreeListPolys.TreeListPolys;
+					newAssistant  #mesquite.lists.TreeListPolyAssumption.TreeListPolyAssumption;
+					setSize 360 400;
+					setLocation 60 22;
+					setFont SanSerif;
+					setFontSize 10;
+					onInfoBar;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #9176018658953570589 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setSize 459 567;
+					setLocation 48 61;
+					setFont SanSerif;
+					setFontSize 10;
+					onInfoBar;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleTight off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					setColumnWidth 70;
+					toggleBirdsEye off;
+					toggleColorsPanel off;
+					birdsEyeWidth 2;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #8938616441617523648  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 689.1153518024068.6797198903402547226;
+				getTreeWindow;
+				tell It;
+					setSize 660 617;
+					setLocation 538 25;
+					setFont SanSerif;
+					setFontSize 10;
+					onInfoBar;
+					setExplanationSize 50;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					getToolPalette;
+					tell It;
+						setTool mesquite.trees.BranchLengthsAdjust.AdjustToolExtra.adjustor;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.SquareTree.SquareTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							stretchToggle off;
+							branchLengthsToggle on;
+							toggleScale on;
+							toggleCenter on;
+							toggleEven on;
+							namesAngle ?;
+						endTell;
+						setEdgeWidth 6;
+						orientUp;
+						toggleCorners off;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					labelBranchLengths off;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setColor Black;
+						toggleColorPartition on;
+						toggleShadePartition off;
+						toggleNodeLabels on;
+						toggleShowNames on;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					useSuggestedSize on;
+					toggleTextOnTree off;
+					newAssistant  #mesquite.ancstates.TraceCharacterHistory.TraceCharacterHistory;
+				tell It;
+					suspend ;
+					setDisplayMode  #mesquite.ancstates.ShadeStatesOnTree.ShadeStatesOnTree;
+					tell It;
+						toggleLabels off;
+					endTell;
+					setHistorySource  #mesquite.ancstates.RecAncestralStates.RecAncestralStates;
+					tell It;
+						getCharacterSource  #mesquite.charMatrices.CharSrcCoordObed.CharSrcCoordObed;
+						tell It;
+							setCharacterSource #mesquite.charMatrices.StoredCharacters.StoredCharacters;
+							tell It;
+								setDataSet #9176018658953570589;
+							endTell;
+						endTell;
+						setMethod  #mesquite.parsimony.ParsAncestralStates.ParsAncestralStates;
+						tell It;
+							setModelSource  #mesquite.parsimony.CurrentParsModels.CurrentParsModels;
+							getEmployee #mesquite.parsimony.ParsimonySquared.ParsimonySquared;
+							tell It;
+								toggleWeight on;
+							endTell;
+						endTell;
+					endTell;
+					setCharacter 1;
+					setMapping 1;
+					toggleShowLegend on;
+					toggleGray off;
+					toggleWeights on;
+					setInitialOffsetX -461;
+					setInitialOffsetY -547;
+					setLegendWidth 142;
+					setLegendHeight 305;
+					resume ;
+				endTell;
+					newWindowAssistant  #mesquite.pdap.PDAPDiagnosticChart.PDAPDiagnosticChart;
+				tell It;
+					getCharacterSource  #mesquite.charMatrices.CharSrcCoordObed.CharSrcCoordObed;
+					tell It;
+						setCharacterSource #mesquite.charMatrices.StoredCharacters.StoredCharacters;
+						tell It;
+							setDataSet #9176018658953570589;
+						endTell;
+					endTell;
+					setScreen 12;
+					setX 1;
+					setY 2;
+					toggleShowLegend on;
+					toggleTreeLabels off;
+					getWindow;
+					tell It;
+						setSize 730 644;
+						setLocation 59 105;
+						setFont SanSerif;
+						setFontSize 10;
+						onInfoBar;
+						setExplanationSize 30;
+						setAnnotationSize 20;
+						setFontIncAnnot 0;
+						setFontIncExp 0;
+						getToolPalette;
+						tell It;
+						endTell;
+						showPage 1;
+						getLegend;
+						tell It;
+							setBounds 0 0 142 66;
+							setOffsetX 0;
+							setOffsetY 0;
+						endTell;
+					endTell;
+					showWindow;
+					getEmployee #mesquite.charts.Scattergram.Scattergram;
+					tell It;
+						markerSize 10;
+						toggleJoin off;
+						toggleShowDots on;
+						movingWindowSize 1;
+						sumByBlocks off;
+							newAssistant  #mesquite.pdap.ScatterRootCIPI.ScatterRootCIPI;
+						tell It;
+							getEmployee #mesquite.pdap.RootReconstructions.RootReconstructions;
+							tell It;
+								setwidth1 0.95;
+								setwidth2 0.9;
+								setDFReduction 0;
+							endTell;
+						endTell;
+					endTell;
+					getEmployee #mesquite.pdap.FelsContrWithChar.FelsContrWithChar;
+					tell It;
+						setItem 0;
+					endTell;
+					getEmployee #mesquite.pdap.ContrastResiduals.ContrastResiduals;
+					tell It;
+						getCharacterSource ;
+						setCharacterA 1;
+						setCharacterB 2;
+					endTell;
+				endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+
